@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+:root {
+  --blue: #3880e5;
+  --lilac: #7d73ed;
+  --darkBlue: #2b3440;
+  --black: #050505;
+  --lightGrey: #f4f5f4
+}
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.cv-preview{
+margin-top: 5rem;
+  width: 100%;
+  list-style: none;
+  height: 85vh;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: auto;
+  min-height: 80vh;
+}
+
+.content {
+  width: 70%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns: one for forms and one for preview */
+  justify-content: center;
+  gap: 50px;
+}
+
+.forms-container {
+  display: flex;
+  flex-direction: column; /* Forms will appear stacked (one below the other) */
+}
+
+.personal-form,
+.education-form, .experience-form {
+  margin-top: 5rem;
+  width: 100%;
+  background: var(--lightGrey);
+  padding: 20px;
+  border-radius: 10px;
+  list-style: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 1rem; 
+}
+
+.education-title, .experience-title {
+  font-weight: 700;
+  border-bottom: 2px solid black;
+}
+
+#preview-education, .preview-experience {
+  margin-bottom: 1rem;
+}
+
+.education, .experience {
+  display: flex;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.education h3, .experience h3{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.education-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+}
+
+.experience-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+}
+
+.degree-dates, .company-dates {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.degree, .company {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.dates {
+  font-style: italic;
+  margin-top: 0.2rem;
+  margin-left: auto; 
+}
+
+.education-location-dates {
+  text-align: right;
+  height: 0;
+}
+
+.experience-location-dates {
+  text-align: right;
+  height: 0;
+}
+
+.education p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+input{
+  min-height: 50px;
+  border-radius: 7px;
+  border: none;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  min-width: 100%;
+  display: block;
+}
+input:active{
+  border: 2px solid var(--darkBlue);
+}
+
+.description {
+  resize: none;
+  height: 100px;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  border:none;
+}
+
+/* Add education button */
+.add-education-btn, .add-experience-btn {
+  background-color: var(--blue);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.add-education-btn:hover {
+  background-color: var(--lilac);
+}
+
+.remove-education-btn, .remove-experience-btn  {
+  background-color: var(--lilac);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.remove-education-btn:hover {
+  background-color: var(--blue);
+}
+
+@media screen and (min-width: 1024px){
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(0px, 1fr));
+  }
+}
+@media screen and (min-width: 300px ) and (max-width:780px){
+  .content{
+    width: 95vw;
+    
+  }
+}
+

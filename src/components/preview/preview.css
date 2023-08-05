@@ -1,0 +1,34 @@
+#name {
+    font-size: 2rem;
+    display: inline;
+    font-weight: bold;
+    color: var(--lilac);
+  }
+  
+  #title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2.8fr 1.2fr;
+    min-height: 100px;
+  }
+  
+  #preview-personal hr {
+    width: 100%;
+    height: 4px;
+    background-color: var(--darkBlue);
+    margin-bottom: 20px;
+  }
+  
+
+  #preview-personal #info-2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  
